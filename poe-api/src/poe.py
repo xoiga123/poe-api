@@ -252,7 +252,7 @@ class Client:
     last_text = ""
     message_id = None
     while True:
-      message = self.message_queues[human_message_id].get(timeout=20)
+      message = self.message_queues[human_message_id].get(timeout=60)
       
       #only break when the message is marked as complete
       if message["state"] == "complete":
